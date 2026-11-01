@@ -1,0 +1,13 @@
+/*
+Theme Name: Hala
+Theme URI: https://github.com/imooorsy/dr-hala-mostafa
+Author: Dr. Hala Mostafa site team
+Description: Custom bilingual (Arabic RTL / English LTR) classic theme for Dr. Hala Mostafa Gomaa — Polylang, ACF/SCF and WooCommerce ready. No page builders.
+Version: 1.0.0
+Requires at least: 6.4
+Requires PHP: 8.0
+Text Domain: hala
+Domain Path: /languages
+License: Proprietary
+*/
+/* All styles live in assets/css/ (enqueued per template). */

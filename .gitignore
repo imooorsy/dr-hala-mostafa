@@ -41,3 +41,4 @@ docs/plugins/*.zip
 Thumbs.db
 /wp-content/uploads-webpc/
 /wp-content/.htaccess
+/.htaccess

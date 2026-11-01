@@ -1,0 +1,79 @@
+/* Listing & content pages: books archive, blog, research, FAQ, policy, contact, search, 404 */
+
+/* Books hero: covers fanned */
+.page-hero--books { padding-bottom: 0; }
+.page-hero--books p { margin-bottom: 0; }
+.cover-fan { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 3vw, 40px); width: min(100%, 980px); margin: clamp(30px, 5vw, 56px) auto 0; padding-bottom: clamp(60px, 9vw, 110px); }
+.cover-fan .book-cover { transform: rotate(-3deg) translateY(0); transition: transform .4s var(--ease); }
+.cover-fan .book-cover:nth-child(2) { transform: rotate(2deg) translateY(-8px); }
+.cover-fan .book-cover:nth-child(3) { transform: rotate(-1.5deg) translateY(-14px); }
+.cover-fan .book-cover:nth-child(4) { transform: rotate(3deg) translateY(2px); }
+@media (max-width: 620px) { .cover-fan { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.shop-section .section-title, .blog-section .section-title, .research-section .section-title { font-size: clamp(2rem, 1.3rem + 2.4vw, 3rem); }
+.shop-section, .blog-section, .research-section { padding-top: clamp(40px, 6vw, 72px); }
+
+/* Blog tiles grid spacing */
+.blog-section .post-tile { min-height: 360px; }
+
+/* FAQ */
+.page-hero--faq { padding-bottom: clamp(110px, 12vw, 160px); }
+.faq-search { margin-top: calc(-1 * clamp(60px, 7vw, 90px)); position: relative; z-index: 2; margin-bottom: 40px; }
+.faq-search .search-bar { margin-top: 0; width: 100%; box-shadow: var(--shadow-soft); }
+.faq-search__icon { display: grid; place-items: center; width: 40px; height: 40px; color: var(--c-muted); }
+.faq-title { color: var(--c-burgundy); text-align: center; font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.5rem); margin-bottom: 1em; }
+.faq-section .accordion__item[hidden] { display: none; }
+.page-hero--faq .page-hero__art { width: min(420px, 60%); inset-inline: auto; inset-inline-end: 8%; opacity: .3; }
+.page-hero--faq + .faq-section { padding-top: 0; }
+.faq-section .search-bar input { padding-inline-start: 12px; }
+
+/* Policy pages */
+.policy-hero { background: linear-gradient(180deg, #6c2a30, var(--c-burgundy-deep)); color: #fff; padding-block: clamp(40px, 6vw, 72px) clamp(28px, 4vw, 44px); border-radius: 0 0 50% 50% / 0 0 36px 36px; }
+.policy-hero h1 { color: #fff; font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem); margin-bottom: .3em; }
+.policy-hero__updated { color: #f0d2cf; margin: 0; }
+.policy-section { padding-top: clamp(32px, 5vw, 56px); }
+.policy-box { border: 1px solid var(--c-line); background: rgba(255, 255, 255, .25); }
+.policy-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 60px); padding: clamp(24px, 4vw, 44px); border-bottom: 1px solid var(--c-line); align-items: start; }
+.policy-row:last-child { border-bottom: 0; }
+.policy-row__title { position: sticky; top: calc(var(--header-h) + 20px); color: #7a2a35; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); line-height: 1.4; margin: 0; font-weight: 500; }
+.policy-row__body.prose { font-size: .98rem; }
+.policy-row__body.prose p:first-child strong { display: block; }
+.policy-row--closing { grid-template-columns: 1fr; color: var(--c-burgundy); font-weight: 700; }
+.policy-row--closing p { margin: 0; text-align: center; }
+.policy-row--intro { grid-template-columns: 1fr; }
+@media (max-width: 760px) { .policy-row { grid-template-columns: 1fr; } .policy-row__title { position: static; } }
+
+/* Contact */
+.contact-section { padding-top: clamp(40px, 6vw, 72px); }
+.contact-section .section-title { font-size: clamp(2.2rem, 1.4rem + 3vw, 3.6rem); }
+.contact-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(18px, 3vw, 32px); align-items: start; }
+.contact-form-panel { order: -1; background: radial-gradient(140% 160% at 80% 0%, #74282e 0%, var(--c-burgundy-deep) 60%, #4d171b 100%); color: #fff; border-radius: var(--r-lg); padding: clamp(24px, 4vw, 40px); }
+.contact-form-panel label { color: #fff; }
+.contact-form-panel .input, .contact-form-panel .textarea, .contact-form-panel select { background: #e9e5da; color: var(--c-text); border-radius: 16px; }
+.contact-form-panel .textarea { min-height: 150px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.phone-field { display: flex; gap: 8px; }
+.phone-field select { width: auto; flex: none; padding-inline: 12px 28px; background-color: #e9e5da; border: 0; border-radius: 16px; font-size: .9rem; }
+.phone-field .input { flex: 1; min-width: 0; }
+.form-actions { display: flex; justify-content: center; margin-top: 6px; }
+.contact-form-panel .form-note.is-ok { color: #d7f0da; } .contact-form-panel .form-note.is-error { color: #ffd0cc; }
+.contact-form-panel .form-note { text-align: center; }
+.contact-side { background: var(--c-card-soft); border-radius: var(--r-lg); padding: clamp(20px, 3vw, 30px); display: grid; gap: 14px; }
+.contact-side__title { font-size: 1.25rem; line-height: 1.6; margin: 0 0 4px; }
+.contact-card { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, .55); border-radius: var(--r-md); padding: 14px 16px; transition: background .2s, transform .2s var(--ease); }
+.contact-card:hover { background: #fff; transform: translateY(-2px); }
+.contact-card__icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--c-rose); color: #fff; font-size: 1.3rem; flex: none; }
+.contact-card__text { display: grid; flex: 1; min-width: 0; line-height: 1.4; }
+.contact-card__text span { font-family: var(--f-serif-accent); font-size: .85rem; overflow-wrap: anywhere; }
+.contact-card .circle-btn { width: 36px; height: 36px; }
+.follow-section .section-title { font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form-panel { order: 0; } }
+
+/* 404 + misc */
+.not-found { padding-block: clamp(70px, 12vw, 150px); }
+.not-found h1 { font-size: clamp(2.2rem, 1.4rem + 3vw, 3.6rem); }
+.back-link { margin-bottom: 1.2rem; }
+
+/* Research single */
+.research-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 0 0 1.8rem; padding: 20px 24px; background: var(--c-card-soft); border-radius: var(--r-md); }
+.research-meta dt { font-size: .78rem; color: var(--c-muted); } .research-meta dd { margin: 0; font-weight: 600; }

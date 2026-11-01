@@ -1,0 +1,59 @@
+/* Design tokens — sampled from docs/reference frames. Single source of truth. */
+:root {
+	/* Colour */
+	--c-burgundy: #7a2a2e;       /* highlighted words, links, price */
+	--c-burgundy-deep: #5e1e22;  /* CTA panels, hero bands */
+	--c-burgundy-hero: #64292d;
+	--c-btn: #7b3c3d;            /* pill buttons */
+	--c-btn-hover: #5e1e22;
+	--c-rose: #8a4a47;           /* medical book cover / badge */
+	--c-gold: #977f5c;           /* footer, title bars */
+	--c-gold-cover: #8f7650;     /* literary book cover / badge */
+	--c-cream: #f3efe8;          /* page background */
+	--c-cream-2: #ede9de;
+	--c-card: #eae4da;           /* cards, accordions */
+	--c-card-soft: #f0ede4;
+	--c-pink: #e9d6d4;           /* chips, sticky bar */
+	--c-pink-deep: #d9c6c2;
+	--c-text: #2b2b2b;
+	--c-muted: #6b6460;
+	--c-line: rgba(94, 30, 34, 0.14);
+	--c-white: #fff;
+	--c-on-dark: #f6efe6;
+
+	/* Typography */
+	--f-head: "El Messiri", "Amiri", "Cairo", serif;
+	--f-body: "Cairo", "Tajawal", system-ui, sans-serif;
+	--f-head-en: "Playfair Display", "El Messiri", serif;
+	--f-body-en: "Inter", "Cairo", system-ui, sans-serif;
+	--f-serif-accent: "Playfair Display", serif;
+
+	--fs-xs: 0.8125rem;
+	--fs-sm: 0.9375rem;
+	--fs-base: 1rem;
+	--fs-lg: 1.25rem;
+	--fs-h4: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+	--fs-h3: clamp(1.35rem, 1.1rem + 0.9vw, 1.75rem);
+	--fs-h2: clamp(1.7rem, 1rem + 1.9vw, 2.6rem);
+	--fs-h1: clamp(1.9rem, 1rem + 2.2vw, 2.9rem);
+
+	/* Space & shape */
+	--gutter: clamp(16px, 5.5vw, 64px);
+	--container: 1140px;
+	--section-gap: clamp(56px, 8vw, 104px);
+	--r-sm: 14px;
+	--r-md: 20px;
+	--r-lg: 28px;
+	--r-xl: 40px;
+	--r-pill: 999px;
+
+	--shadow-soft: 0 10px 30px -14px rgba(94, 30, 34, 0.25);
+	--shadow-card: 0 2px 0 rgba(255, 255, 255, 0.6) inset, 0 12px 28px -18px rgba(60, 40, 30, 0.35);
+	--header-h: 72px;
+	--ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+:root[lang^="en"] {
+	--f-head: var(--f-head-en);
+	--f-body: var(--f-body-en);
+}
