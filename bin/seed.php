@@ -29,8 +29,11 @@ function seed_log( $m ) { WP_CLI::log( $m ); }
 /** Import a placeholder image into the media library once. */
 function seed_media( string $file, string $title ): int {
 	$found = get_posts( array( 'post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_hala_seed_file', 'meta_value' => $file, 'numberposts' => 1, 'fields' => 'ids' ) ); // phpcs:ignore
-	if ( $found ) {
+	if ( $found && file_exists( (string) get_attached_file( (int) $found[0] ) ) ) {
 		return (int) $found[0];
+	}
+	if ( $found ) {
+		wp_delete_attachment( (int) $found[0], true ); // Record without a file (e.g. DB imported without uploads): re-import.
 	}
 	$src = HALA_DIR . '/assets/images/placeholders/' . $file;
 	if ( ! file_exists( $src ) ) {

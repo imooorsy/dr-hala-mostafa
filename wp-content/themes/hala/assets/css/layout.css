@@ -77,3 +77,11 @@
 .lang-switch ul { position: absolute; inset-block-end: calc(100% + 6px); inset-inline-start: 0; list-style: none; margin: 0; padding: 6px; min-width: 130px; background: #fff; color: var(--c-text); border-radius: var(--r-sm); box-shadow: var(--shadow-soft); z-index: 5; }
 .lang-switch a { display: block; padding: 8px 14px; border-radius: 10px; font-size: .88rem; }
 .lang-switch a:hover, .lang-switch .is-current a { background: var(--c-pink); color: var(--c-burgundy-deep); }
+
+@media (max-width: 520px) {
+	.site-header__inner { gap: 10px; }
+	.header-actions { gap: 8px; }
+	.cart-pill { padding-inline: 12px; }
+	.cart-pill__label { display: none; }
+	.brand__text { font-size: .78rem; }
+}

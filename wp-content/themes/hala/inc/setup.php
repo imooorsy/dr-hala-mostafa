@@ -115,3 +115,11 @@ function hala_reading_time( int $post_id = 0 ): int {
 	$words = str_word_count( wp_strip_all_tags( get_post_field( 'post_content', $post_id ?: get_the_ID() ) ) );
 	return max( 1, (int) ceil( $words / 180 ) );
 }
+
+/** Always print dir="ltr|rtl" on <html> (WordPress omits it for LTR; our CSS mirrors icons via [dir]). */
+add_filter(
+	'language_attributes',
+	static function ( $out ) {
+		return false === strpos( $out, 'dir=' ) ? $out . ' dir="ltr"' : $out;
+	}
+);
