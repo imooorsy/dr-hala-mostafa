@@ -1,0 +1,43 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+!/wp-config-sample.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# Config / secrets
+/wp-config.php
+.env
+docs/LOCAL_CREDENTIALS.md
+
+# Content & third-party
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/plugins/*
+!/wp-content/plugins/index.php
+/wp-content/themes/*
+!/wp-content/themes/hala/
+!/wp-content/themes/index.php
+/wp-content/languages/
+/wp-content/debug.log
+/wp-content/updraft/
+/wp-content/wflogs/
+/wp-content/ai1wm-backups/
+!/wp-content/mu-plugins/
+
+# Tooling
+node_modules/
+bin/wp-cli.phar
+bin/cacert.pem
+*.zip
+docs/plugins/*.zip
+*.log
+.DS_Store
+Thumbs.db
+/wp-content/uploads-webpc/
+/wp-content/.htaccess
